@@ -45,7 +45,9 @@ main(void) {
 					}else if(s->count >= 10){
 						delete_kmer(s);
 					}else{
-						add_kmer(kmer, s->count+1, line);
+						//add_kmer(kmer, s->count+1, line);
+    						strcpy(s->readname[s->count], line);
+						s->count++;
 					}
 				}
 				strcpy(header, line);
